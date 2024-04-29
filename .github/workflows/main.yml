@@ -29,7 +29,7 @@ jobs:
       - name: 🏭 Build Web Application
         run: flutter build web --release
         
-      - name: cd build/web
+      - name: ls build/web
         run: ls -a build/web
 
       # (3)
@@ -38,6 +38,9 @@ jobs:
           chmod u+x "${GITHUB_WORKSPACE}/createandcopytofolder.sh"
           bash "${GITHUB_WORKSPACE}/createandcopytofolder.sh"
 
+      - name: ls artifacts/web
+        run: ls -a artifacts/web
+        
       # (4)
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
