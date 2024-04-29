@@ -11,7 +11,7 @@ jobs:
     permissions:
       # Give the default GITHUB_TOKEN write permission to commit and push the
       # added or changed files to the repository.
-      contents: read write
+      contents: read
       pages: write
     # (2)
     steps:
