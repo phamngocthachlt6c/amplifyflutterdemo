@@ -31,18 +31,8 @@ jobs:
         
       - name: cd build/web
         run: cd build/web
-      - name: git init
-        run: git init
-      - name: git config global user
-        run: git config --global user.email "phamngocthachlt6c@gmail.com"
-      - name: git config global name
-        run: git config --global user.name "phamngocthachlt6c"
-      - name: git add --all
-        run: git add --all
-      - name: git commit
-        run: git commit -m "update"
-      - name: git push
-        run: git push origin
+      - name: ls
+        run: ls -a
 
       # (3)
       - name: Make copy of artifacts
