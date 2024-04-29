@@ -28,11 +28,17 @@ jobs:
 
       - name: 🏭 Build Web Application
         run: flutter build web --release
-              cd build/web
-              git init
-              git add --all
-              git commit -m "update"
-              git push origin
+        
+      - name: cd build/web
+        run: cd build/web
+      - name: git init
+        run: git init
+      - name: git add --all
+        run: git add --all
+      - name: git commit
+        run: git commit -m "update"
+      - name: git push
+        run: git push origin
 
       # (3)
       - name: Make copy of artifacts
